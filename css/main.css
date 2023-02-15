@@ -1,0 +1,55 @@
+/* start Global rules*/
+:root {
+    main-color: ;
+    main-color-alt: ;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Cairo', sans-serif;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    margin-right: auto;
+    margin-left: auto;
+}
+/* Small screens */
+@media only screen and (max-width: 767px) {
+    .container {
+      width: 100%;
+      max-width: 100%;
+      padding: 0 10px;
+    }
+  }
+  
+/* Medium screens */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .container {
+      width: 100%;
+      max-width: 750px;
+      padding: 0 15px;
+    }
+  }
+  
+/* Large screens */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .container {
+      width: 100%;
+      max-width: 970px;
+      padding: 0 15px;
+    }
+  }
+  
+/* Extra large screens */
+@media only screen and (min-width: 1200px) {
+    .container {
+      max-width: 1170px;
+      padding: 0 30px;
+    }
+  }
+/* end Global rules*/
