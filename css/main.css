@@ -8,6 +8,7 @@
   --main-color: #2196f3;
   --main-color-alt: #1787e0;
   --main-transition: 0.3s;
+  --fill-color: #fafafa;
 }
 html {
     scroll-behavior: smooth;
@@ -62,6 +63,7 @@ a {
     }
   }
 /* end Global rules*/
+/* start header  */
 header {
   background-color: white;
   position: relative;
@@ -130,10 +132,67 @@ header .main-nav ul > li > a::before {
   transition: var(--main-transition);
 }
 header .main-nav ul > li > a:hover{
-  background-color: #fafafa;
+  background-color: var(--fill-color);
   color: var(--main-color);
 }
 header .main-nav ul > li > a:hover::before {
- content: "";
- left: 0;
+  content: "";
+  left: 0;
 }
+/* end header  */
+/* start landing */
+.landing {
+  position: relative;
+}
+.landing::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ECECEC;
+  z-index: -1;
+  transform: skewY(-6deg);
+  transform-origin: top left;
+}
+.landing .container {
+  min-height: calc(100vh - 73px);
+  display: flex;
+  align-items: center;
+  padding-bottom: 120px;
+}
+.landing .text {
+  flex: 1;
+}
+.landing .text h1 {
+  font-size: 40px;
+  letter-spacing: -2px;
+  margin: 0;
+}
+.landing .text p {
+  font-size: 23px;
+  color: #777;
+  line-height: 1.7;
+  margin: 5px 0 0;
+  max-width: 500px;
+}
+.landing .image img {
+  max-width: 600px;
+  width: 100%;
+}
+.landing .go-down {
+  position: absolute;
+  bottom: 30px;
+  color: var(--main-color);
+  left: 50%;
+  transform: translateX(-50%);   
+}
+.landing .go-down:hover {
+  color: var(--main-color-alt);
+}
+.landing .go-down i {
+  
+}
+
+/* end landing */
