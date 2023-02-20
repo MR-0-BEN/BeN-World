@@ -102,7 +102,7 @@ header .main-nav ul {
     margin: auto;
   }
 }
-header .main-nav ul > li > a {
+header .main-nav > ul > li > a {
   font-size: 18px;
   color: black;
   padding: 0 30px;
@@ -115,13 +115,13 @@ header .main-nav ul > li > a {
   overflow: hidden;
 }
 @media only screen and (max-width: 767px) {
-  header .main-nav ul > li > a {
+  header .main-nav > ul > li > a {
     padding: 10px;
     height: 40px;
     font-size: 14px;
   }
 }
-header .main-nav ul > li > a::before {
+header .main-nav > ul > li > a::before {
   content: "";
   position: absolute;
   height: 4px;
@@ -131,13 +131,50 @@ header .main-nav ul > li > a::before {
   left: -100%;
   transition: var(--main-transition);
 }
-header .main-nav ul > li > a:hover{
+header .main-nav > ul > li > a:hover{
   background-color: var(--fill-color);
   color: var(--main-color);
 }
-header .main-nav ul > li > a:hover::before {
+header .main-nav > ul > li > a:hover::before {
   content: "";
   left: 0;
+}
+header .mega-menu {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  background-color: white;
+  z-index: 100;
+  display: flex;
+  gap: 40px;
+  padding: 30px;
+  border-bottom: 3px solid var(--main-color);
+  transition: top var(--main-transition), opacity var(--main-transition);
+}
+header .mega-menu .image img {
+  max-width: 100%;
+}
+header .mega-menu .links {
+
+}
+header .mega-menu .links li {
+
+}
+header .mega-menu .links li::before {
+
+}
+header .mega-menu .links li:hover::before {
+
+}
+header .mega-menu .links li a {
+  display: block;
+  font-size: 18px;
+  padding: 15px;
+  font-weight: bold;
+  color: var(--main-color);
+}
+header .mega-menu .links li a i {
+  margin-right: 15px;
 }
 /* end header  */
 /* start landing */
