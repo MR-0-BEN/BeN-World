@@ -345,6 +345,41 @@ header .mega-menu .links li a i {
   animation: pounce 1.5s linear infinite;
 }
 /* end landing */
+/* start articles */
+article {
+
+}
+article .main-title {
+
+}
+article .container {
+
+}
+article .box {
+
+}
+article .box img{
+
+}
+article .box .content {
+
+}
+article .box .content h2 {
+
+}
+article .box .content p {
+
+}
+article .box .info {
+
+}
+article .box .info a {
+
+}
+article .box .info i {
+  
+}
+/* end articles */
 /* start animation */
 @keyframes up-down {
   0%, 100%  {
