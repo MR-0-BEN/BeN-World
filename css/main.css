@@ -7,6 +7,7 @@
 :root {
   --main-color: #2196f3;
   --main-color-alt: #1787e0;
+  --section-background: #ECECEC;
   --main-transition: 0.3s;
   --fill-color: #fafafa;
   --padding-top: 100px;
@@ -278,7 +279,7 @@ header .mega-menu .links li a i {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: #ECECEC;
+  background-color: var(--section-background);
   z-index: -1;
   transform: skewY(-6deg);
   transform-origin: top left;
@@ -372,7 +373,6 @@ article .box:hover {
 article .box img {
   width: 100%;
   max-width: 100%;
-  border-radius: 6px;
 }
 article .box .content {
   padding: 20px;
@@ -389,6 +389,7 @@ article .box .content p {
 article .box .info {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px;
 }
 article .box .info a {
@@ -403,6 +404,52 @@ article .box:hover .info i {
   animation: bounce-right 1s ease-in-out infinite;  
 }
 /* end articles */
+/* start gallery */
+.gallery {
+  padding-top: var(--padding-top);
+  padding-bottom: var(--padding-bottom);
+  background-color: var(--section-background);
+  position: relative;
+}
+.gallery .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.gallery .box { 
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%), 0px 2px 4px 0px rgb(0 0 0 / 12%);
+  overflow: hidden;
+}
+.gallery .box .image {
+   position: relative;
+   overflow: hidden;
+}
+.gallery .box .image::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  z-index: 2;
+}
+.gallery .box:hover .image::before{
+  animation: flash 0.7s;
+}
+.gallery .image img {
+  width: 100%;
+  max-width: 100%;
+  transition: var(--main-transition);
+}
+.gallery .image:hover img {
+  transform: rotate(5deg) scale(1.1);
+}
+/* end gallery */
 /* start animation */
 @keyframes up-down {
   0%, 100%  {
@@ -454,6 +501,16 @@ article .box:hover .info i {
   }
   40%,60% {
     transform: translateX(-15px);
+  }
+}
+@keyframes flash {
+  0%,40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 200%;
+    height: 200%;
   }
 }
 /* end animation */
