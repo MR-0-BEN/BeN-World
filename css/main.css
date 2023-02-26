@@ -514,7 +514,6 @@ article .box:hover .info i {
   height: 5px;
   bottom: -20px;
   right: 15px;
-  background-color: red;
   width: calc(100% - 30px);
 }
 .features .box p {
@@ -529,11 +528,55 @@ article .box:hover .info i {
   font-size: 22px;
   font-weight: bold;
   padding: 10px 30px;
-  border: 3px solid red;
+  border: 3px solid transparent;
   width: fit-content;
   margin: 0px auto 30px;
   border-radius: 6px;
   color: var(--main-color);
+  transition: var(--main-transition);
+}
+.features .quality .image::before {
+  background-color: rgba(244, 63, 54, 0.6)
+}
+.features .quality h2::after {
+  background-color: #f44036;
+}
+.features .quality a {
+  border-color: #f44036;
+  color: #f44036;
+  background: linear-gradient(to right ,#f44036 50%, white 50%);
+  background-size: 200% 98%;
+  background-position:right bottom;
+}
+.features .time .image::before {
+  background-color: rgb(0, 150, 136, 0.6)
+}
+.features .time h2::after {
+  background-color: #009688;
+}
+.features .time a {
+  border-color: #009688;
+  color: #009688;
+  background: linear-gradient(to right ,#009688 50%, white 50%);
+  background-size: 200% 98%;
+  background-position: right bottom;
+}
+.features .passion .image::before {
+  background-color: rgb(3, 169, 244, 0.6)
+}
+.features .passion h2::after {
+  background-color: #03a9f4;
+}
+.features .passion a {
+  border-color: #03a9f4;
+  color: #03a9f4;
+  background: linear-gradient(to right ,#03a9f4 50%, white 50%);
+  background-size: 200% 98%;
+  background-position: right bottom;
+}
+.features .box:hover a {
+  background-position: left bottom;
+  color: white;
 }
 /* end features  */
 /* start animation */
