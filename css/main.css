@@ -482,20 +482,58 @@ article .box:hover .info i {
   content: "";
   position: absolute;
   bottom: 0;
-  right: 0;
+  right:  0;
   border-width: 0px 0px 170px 500px;
   border-color: transparent transparent white transparent;
   border-style: solid;
+  transition: var(--main-transition);
 }
+.features .box:hover .image::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-width: 170px 500px 170px 0px;
+    border-color: transparent transparent white transparent;
+    border-style: solid;
+}
+
 .features .box .image img {
   max-width: 100%;
   width: 100%;
 }
 .features .box h2 {
-
+  position: relative;
+   font-size: 40px;
+   margin: auto;
+   width: fit-content;
+}
+.features .box h2::after{
+  content: "";
+  position: absolute;
+  height: 5px;
+  bottom: -20px;
+  right: 15px;
+  background-color: red;
+  width: calc(100% - 30px);
 }
 .features .box p {
-
+  padding: 25px;
+  margin: 30px 0;
+  line-height: 2;
+  font-size: 20px;
+  color: #777;
+}
+.features .box a {
+  display: block;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px 30px;
+  border: 3px solid red;
+  width: fit-content;
+  margin: 0px auto 30px;
+  border-radius: 6px;
+  color: var(--main-color);
 }
 /* end features  */
 /* start animation */
