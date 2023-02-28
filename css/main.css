@@ -579,6 +579,53 @@ article .box:hover .info i {
   color: white;
 }
 /* end features  */
+/* start testimonials */
+.testimonials {
+  padding-top: var(--padding-top);
+  padding-bottom: var(--padding-bottom);
+  background-color: var(--section-background);
+}
+.testimonials .container {
+  display: grid;
+  grid-template-columns: repeat( auto-fill, minmax(300px , 1fr));
+  gap: 40px;
+}
+.testimonials .box {
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 7%);
+}
+.testimonials .box img{
+  max-width: 100%;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: -10px;
+  top: -50px;
+  border-radius: 50%;
+  border: 10px solid var(--section-background);
+}
+.testimonials .box h3{
+  margin: 0px 0px 10px;
+}
+.testimonials .box span {
+  margin-bottom: 10px;
+  display: block;
+  color: #777;
+}
+.testimonials .box .rate .filled{
+  color: gold;
+}
+.testimonials .box p{
+  margin-top: 10px;
+  line-height: 1.5;
+  color: #777777ba;
+  margin-bottom: 0px;
+}
+
+/* end testimonials */
 /* start animation */
 @keyframes up-down {
   0%, 100%  {
