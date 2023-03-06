@@ -843,6 +843,50 @@ article .box:hover .info i {
   background-color: var(--main-color);
 }
 /* end skills */
+/* start work steps */
+.work-steps {
+  padding-top: var(--padding-top);
+  padding-bottom: var(--padding-bottom);
+  background-color: var(--section-background); 
+}
+.work-steps .container {
+  display: flex;
+  align-items: center;
+}
+.work-steps img {
+  margin-right: 40px;
+}
+.work-steps .steps .box img{
+  width: 64px;
+  height: 64px;
+  margin: 0px 30px 0px 0px;
+}
+.work-steps .steps {
+  flex: 1;
+}
+.work-steps .steps .box{
+  padding: 30px 35px;
+  background-color: #f6f5f5;
+  border: 1px solid white;
+  margin: 0px 0px 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  position: relative;
+  z-index: 1;
+}
+.work-steps .steps .box .info h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+.work-steps .steps .box .info p {
+  color: #777;
+  line-height: 1.7;
+  font-size: 18px;
+  margin: 10px 0 0;
+}
+/* end work steps */
 /* start animation */
 @keyframes up-down {
   0%, 100%  {
