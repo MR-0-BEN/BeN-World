@@ -1079,8 +1079,88 @@ right: 0;
 .pricing .box:hover::after {
   width: 100%;
 }
+@media (min-width: 1200px){
+  .pricing .box.popular{
+    top: -20px;
+  }
+}
+.pricing .box .label {
+  position: absolute;
+  writing-mode: vertical-rl;
+  right: 20px;
+  width: 40px;
+  background-color: var(--main-color);
+  padding: 10px 10px 35px;
+  color: white;
+  font-weight: bold;
+}
+.pricing .box .label::before {
+  content: "";
+  position: absolute;
+  border-color: transparent transparent white transparent;
+  border-style: solid;
+  border-width: 20px;
+  bottom: 0;
+  right: 0;
+  transition: var(--main-transition);
+}
+.pricing .box:hover .label::before  {
+  border-color: transparent transparent #f6f6f6 transparent;
+  transition: var(--main-transition);
+}
+.pricing .box .title {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 30px 0;
+  letter-spacing: -1px;
+}
 .pricing .box img {
   width: 80px;
+  margin-bottom: 50px;
+}
+.pricing .box .price {
+  margin-bottom: 20px;
+}
+.pricing .box .amount {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 60px;
+  font-weight: bold;
+  color: var(--main-color);
+  letter-spacing: -2px;
+}
+.pricing .box ul {
+  text-align: left;
+}
+.pricing .box li {
+  padding: 20px;
+  border-top: 2px #eee solid;
+}
+.pricing .box li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  font-weight: 900;
+  margin-right: 10px;
+  color: var(--main-color);
+  font-size: 20px;
+}
+.pricing .box a{
+  margin: 30px auto 40px;
+  display: block;
+  width: fit-content;
+  font-weight: bold;
+  color: var(--main-color);
+  border: solid 2px var(--main-color);
+  padding: 15px 20px;
+  border-radius: 6px;
+  transition: var(--main-transition);
+}
+.pricing .box a:hover {
+  color: white;
+  border: solid 2px var(--main-color);
+  background-color: var(--main-color);
+  transition: var(--main-transition);
+
 }
 /* end pricing */
 /* start animation */
