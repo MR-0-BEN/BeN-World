@@ -115,6 +115,38 @@ a {
   animation: move-left 0.5s ease-out forwards;
   z-index: -1;
 }
+/* spikes */
+.spikes {
+  position: relative;
+}
+.spikes::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: -0%;
+  top: 100%;
+  z-index: 10;
+  display: block;
+  height: 30px;
+  background-size: 30px 30px;
+  background-image: linear-gradient(135deg, white 25%, transparent 25%), linear-gradient(225deg, white 25%, transparent 25%);
+  background-position: 0 0;}
+/* dots */
+.dots {
+  background-image: url(../images/dots.webp);
+    height: 186px;
+    width: 204px;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+.dots-up {
+  top: 200px;
+  right: 0;
+}
+.dots-down {
+  bottom: 200px;
+  left: 0;
+}
 /* end Global rules*/
 /* start header  */
 header {
@@ -581,6 +613,7 @@ article .box:hover .info i {
 /* end features  */
 /* start testimonials */
 .testimonials {
+  position: relative;
   padding-top: var(--padding-top);
   padding-bottom: var(--padding-bottom);
   background-color: var(--section-background);
@@ -805,6 +838,7 @@ article .box:hover .info i {
 /* end services */
 /* start skills */
 .our-skills {
+  position: relative;
   padding-top: var(--padding-top);
   padding-bottom: var(--padding-bottom);
   background-color: white;
@@ -1225,7 +1259,7 @@ right: 0;
   padding-top: var(--padding-top);
   padding-bottom: var(--padding-bottom);
   position: relative;
-  background-image: url(../images/stats.jpg);
+  background-image: url(../images/stats.webp);
   background-size: cover;
 }
 .stats::before {
@@ -1303,7 +1337,7 @@ right: 0;
 }
 .discount .image {
   position: relative;
-  background-image: url(../images/discount-background1.jpg);
+  background-image: url(../images/discount-background1.webp);
   background-size: cover;
   flex-basis: 50%;
   display: flex;
@@ -1581,10 +1615,10 @@ footer .copyrights {
 }
 @keyframes change-background {
   0%,100% {
-    background-image: url(../images/discount-background1.jpg);
+    background-image: url(../images/discount-background1.webp);
   }
   50% {
-    background-image: url(../images/discount-background2.jpg);
+    background-image: url(../images/discount-background2.webp);
   }
 }
 /* end animation */
